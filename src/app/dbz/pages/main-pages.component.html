@@ -1,0 +1,19 @@
+<h1>DBZ Personajes</h1>
+<hr/>
+
+<div class="row">
+
+  <div class="col">
+    <!-- <dbz-list [personaje]="dbz_services.characters" (ondelete)="dbz_services.onDelete($event)" ></dbz-list> -->
+    <dbz-list [personaje]="charters" (ondelete)="deleteCharacter($event)" ></dbz-list>
+  </div>
+
+  <div class="col">
+    <!-- el onNewCharacter , como este es el componente padre se pide que es lo que quiere hace : en este  -->
+    <!-- caso va a recibir un tipo de caracter de tipo Character -->
+
+    <add-dbz-character (onNewCharacter)="onNewCharacter($event)" ></add-dbz-character>
+  </div>
+
+
+</div>

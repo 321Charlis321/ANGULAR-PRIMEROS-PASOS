@@ -1,0 +1,14 @@
+<h4>Agregar Personajes</h4>
+<!-- cuando ponemos en paretnticis osea un evencto click  = (click)="" se esta asociando un evento -->
+<!-- y cuado se pone en corchete [] por ejemplo  [ngClass]="" se esta asopciando un atributo
+ y si esta ambos se esta asociando un evento y un atributo [()]  a ESTO SE LE LLAMA:  TWO DATE BINDING -->
+<form action="" class="row" (ngSubmit)="emitCharacter()">
+
+  <input [(ngModel)]="character.name" name="name" class="form-control mb-2" type="text" placeholder="nombre" />
+  <input  [(ngModel)]="character.power" name ="power" class="form-control mb-2" type="number" placeholder="poder" />
+
+  <button  type="submit" class="btn btn-primary">Agregar</button>
+
+  <!-- <pre>{{ character | json }}</pre> -->
+
+</form>
